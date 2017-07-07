@@ -8073,7 +8073,7 @@
 
 	ReactDOM.render(React.createElement(_App2.default, null), document.getElementById('root'));
 
-	console.log('index4');
+	console.log('index');
 
 /***/ }),
 /* 298 */
@@ -8158,7 +8158,7 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      var theCity = JSON.parse(localStorage.getItem('city'));
-	      document.body.style.backgroundImage = "url('../styles/pics/default_weather.jpeg')";
+	      document.body.style.backgroundImage = "url('./styles/pics/default_weather.jpeg')";
 
 	      theCity && this.loadInfo(theCity, this.state.language);
 	    }
@@ -23635,9 +23635,7 @@
 	      document.body.style.backgroundImage = _WeatherBackgrounds2.default[keys[i]];
 	      break;
 	    } else {
-	      console.log('default');
 	      document.body.style.backgroundImage = _WeatherBackgrounds2.default.default;
-	      // document.body.style.backgroundImage = "url('../styles/pics/default_weather.jpeg')";
 	    }
 	  }
 	};
