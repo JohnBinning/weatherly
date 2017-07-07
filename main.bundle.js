@@ -8073,8 +8073,6 @@
 
 	ReactDOM.render(React.createElement(_App2.default, null), document.getElementById('root'));
 
-	console.log('index');
-
 /***/ }),
 /* 298 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -23551,7 +23549,7 @@
 /* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -23568,46 +23566,45 @@
 	  var currentForecast = _ref.currentForecast;
 
 	  if (currentForecast.forecast) {
-	    console.log(currentForecast, 'cf');
 	    return _react2.default.createElement(
-	      'section',
-	      { className: 'current-forecast' },
+	      "section",
+	      { className: "current-forecast" },
 	      _react2.default.createElement(
-	        'div',
-	        { className: 'current-forecast-date' },
+	        "div",
+	        { className: "current-forecast-date" },
 	        currentForecast.weekday,
-	        ',',
+	        ",",
 	        currentForecast.month,
-	        ' ',
+	        " ",
 	        currentForecast.day
 	      ),
 	      _react2.default.createElement(
-	        'div',
-	        { className: 'current-forecast-temps' },
+	        "div",
+	        { className: "current-forecast-temps" },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'current-forecast-high' },
+	          "div",
+	          { className: "current-forecast-high" },
 	          currentForecast.high,
-	          '\xB0'
+	          "\xB0"
 	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'current-forecast-low' },
+	          "div",
+	          { className: "current-forecast-low" },
 	          currentForecast.low,
-	          '\xB0'
+	          "\xB0"
 	        )
 	      ),
 	      _react2.default.createElement(
-	        'div',
-	        { className: 'current-forecast-forecast' },
+	        "div",
+	        { className: "current-forecast-forecast" },
 	        currentForecast.forecast
 	      )
 	    );
 	  }
 	  return _react2.default.createElement(
-	    'div',
-	    { className: 'no-location-instructions' },
-	    'Enter a location and click save to get started'
+	    "div",
+	    { className: "no-location-instructions" },
+	    "Enter a location and click save to get started"
 	  );
 	}
 

@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function CurrentForecast({ currentForecast }) {
   if(currentForecast.forecast){
-    console.log(currentForecast, 'cf')
     return (
       <section className="current-forecast">
         <div className="current-forecast-date">{currentForecast.weekday},
