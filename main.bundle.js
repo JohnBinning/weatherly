@@ -8073,6 +8073,8 @@
 
 	ReactDOM.render(React.createElement(_App2.default, null), document.getElementById('root'));
 
+	console.log('index');
+
 /***/ }),
 /* 298 */
 /***/ (function(module, exports, __webpack_require__) {
