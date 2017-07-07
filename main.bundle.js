@@ -8073,7 +8073,7 @@
 
 	ReactDOM.render(React.createElement(_App2.default, null), document.getElementById('root'));
 
-	console.log('index3');
+	console.log('index4');
 
 /***/ }),
 /* 298 */
@@ -23362,27 +23362,30 @@
 	function Conditions(_ref) {
 	  var conditions = _ref.conditions;
 
-	  return _react2.default.createElement(
-	    "div",
-	    { className: "conditions" },
-	    _react2.default.createElement(
+	  if (conditions.location) {
+	    return _react2.default.createElement(
 	      "div",
-	      { className: "condition-location" },
-	      conditions.location
-	    ),
-	    _react2.default.createElement(
-	      "div",
-	      { className: "condition-temp-f" },
-	      conditions.tempF,
-	      "\xB0"
-	    ),
-	    _react2.default.createElement("img", { className: "condition-img", src: conditions.icon }),
-	    _react2.default.createElement(
-	      "div",
-	      { className: "condition-status" },
-	      conditions.status
-	    )
-	  );
+	      { className: "conditions" },
+	      _react2.default.createElement(
+	        "div",
+	        { className: "condition-location" },
+	        conditions.location
+	      ),
+	      _react2.default.createElement(
+	        "div",
+	        { className: "condition-temp-f" },
+	        conditions.tempF,
+	        "\xB0"
+	      ),
+	      _react2.default.createElement("img", { className: "condition-img", src: conditions.icon }),
+	      _react2.default.createElement(
+	        "div",
+	        { className: "condition-status" },
+	        conditions.status
+	      )
+	    );
+	  }
+	  return _react2.default.createElement("div", null);
 	}
 
 /***/ }),
@@ -23487,9 +23490,8 @@
 	        _react2.default.createElement(_HourCard2.default, {
 	          hour: hour.time,
 	          condition: hour.condition,
-	          temp: hour.tempE
-	          // low = {hour.low}
-	          , icon: hour.icon
+	          temp: hour.tempE,
+	          icon: hour.icon
 	        })
 	      );
 	    })
@@ -23549,7 +23551,7 @@
 /* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -23565,39 +23567,47 @@
 	function CurrentForecast(_ref) {
 	  var currentForecast = _ref.currentForecast;
 
-	  return _react2.default.createElement(
-	    "section",
-	    { className: "current-forecast" },
-	    _react2.default.createElement(
-	      "div",
-	      { className: "current-forecast-date" },
-	      currentForecast.weekday,
-	      ",",
-	      currentForecast.month,
-	      " ",
-	      currentForecast.day
-	    ),
-	    _react2.default.createElement(
-	      "div",
-	      { className: "current-forecast-temps" },
+	  if (currentForecast.forecast) {
+	    console.log(currentForecast, 'cf');
+	    return _react2.default.createElement(
+	      'section',
+	      { className: 'current-forecast' },
 	      _react2.default.createElement(
-	        "div",
-	        { className: "current-forecast-high" },
-	        currentForecast.high,
-	        "\xB0"
+	        'div',
+	        { className: 'current-forecast-date' },
+	        currentForecast.weekday,
+	        ',',
+	        currentForecast.month,
+	        ' ',
+	        currentForecast.day
 	      ),
 	      _react2.default.createElement(
-	        "div",
-	        { className: "current-forecast-low" },
-	        currentForecast.low,
-	        "\xB0"
+	        'div',
+	        { className: 'current-forecast-temps' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'current-forecast-high' },
+	          currentForecast.high,
+	          '\xB0'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'current-forecast-low' },
+	          currentForecast.low,
+	          '\xB0'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'current-forecast-forecast' },
+	        currentForecast.forecast
 	      )
-	    ),
-	    _react2.default.createElement(
-	      "div",
-	      { className: "current-forecast-forecast" },
-	      currentForecast.forecast
-	    )
+	    );
+	  }
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'no-location-instructions' },
+	    'Enter a location and click save to get started'
 	  );
 	}
 

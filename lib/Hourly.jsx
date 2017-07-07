@@ -11,7 +11,6 @@ const Hourly = ({ hourly }) => {
                 hour = {hour.time}
                 condition = {hour.condition}
                 temp = {hour.tempE}
-                // low = {hour.low}
                 icon = {hour.icon}
               />
             </div>

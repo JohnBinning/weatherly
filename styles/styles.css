@@ -50,6 +50,16 @@ input, button, select {
 
 /*---current---*/
 
+.no-location-instructions {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+  padding: 5px;
+}
+
 .conditions {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
