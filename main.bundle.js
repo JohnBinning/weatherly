@@ -8073,7 +8073,7 @@
 
 	ReactDOM.render(React.createElement(_App2.default, null), document.getElementById('root'));
 
-	console.log('index2');
+	console.log('index3');
 
 /***/ }),
 /* 298 */
@@ -23605,7 +23605,7 @@
 /* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -23625,7 +23625,8 @@
 	      document.body.style.backgroundImage = _WeatherBackgrounds2.default[keys[i]];
 	      break;
 	    } else {
-	      document.body.style.backgroundImage = "url('./styles/pics/default_weather.jpeg')";
+	      console.log('default');
+	      document.body.style.backgroundImage = _WeatherBackgrounds2.default.default;
 	      // document.body.style.backgroundImage = "url('../styles/pics/default_weather.jpeg')";
 	    }
 	  }
@@ -23661,7 +23662,8 @@
 	  clear: "url('./styles/pics/Clear_Skies.jpeg')",
 	  sleet: "url('./styles/pics/sleet.jpg')",
 	  fog: "url('./styles/pics/bw_fog.jpeg')",
-	  haze: "url('./styles/pics/haze.jpeg')"
+	  haze: "url('./styles/pics/haze.jpeg')",
+	  default: "url('./styles/pics/default_weather.jpeg')"
 	};
 
 	exports.default = WeatherBackgrounds;
