@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Input from './Input';
 import TenDay from './TenDay';
 import Conditions from './Conditions';
-import keys from '../keys';
+// import keys from '../keys';
 import * as $ from 'jquery';
 import scrubData from './scrubData';
 import Hourly from './Hourly';
@@ -30,7 +30,7 @@ export default class App extends Component {
   }
 
   handleClick(input, language) {
-    const url = `http://api.wunderground.com/api/2e519fe31304e9ee/conditions/hourly/forecast10day/lang:${language}/${input}.json`;
+    const url = `https://api.wunderground.com/api/2e519fe31304e9ee/conditions/hourly/forecast10day/lang:${language}/${input}.json`;
 
     this.getInfo(input, language).catch(() => {
       alert('please select a valid location');
@@ -47,7 +47,7 @@ export default class App extends Component {
   }
 
   getInfo(input, language) {
-    const url = `http://api.wunderground.com/api/${keys.johnKey}/conditions/hourly/forecast10day/lang:${language}/${input}.json`;
+    const url = `https://api.wunderground.com/api/2e519fe31304e9ee/conditions/hourly/forecast10day/lang:${language}/${input}.json`;
     const weather = $.get(url).then((dataResponse) => {
       this.setState(scrubData(dataResponse));
     }).then(() => {
@@ -58,7 +58,7 @@ export default class App extends Component {
   }
 
   loadInfo(input, language) {
-    const url = `http://api.wunderground.com/api/${keys.johnKey}/conditions/hourly/forecast10day/lang:${language}/${input}.json`;
+    const url = `https://api.wunderground.com/api/2e519fe31304e9ee/conditions/hourly/forecast10day/lang:${language}/${input}.json`;
 
     this.getInfo(input, language);
     this.setURL(url, input);

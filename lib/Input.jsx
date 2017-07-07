@@ -22,7 +22,7 @@ export default class Input extends Component {
   }
 
   autoComplete(input) {
-    $.getJSON(`http://autocomplete.wunderground.com/aq?cb=?&query=${input}`).then((dataResponse) => {
+    $.getJSON(`https://autocomplete.wunderground.com/aq?cb=?&query=${input}`).then((dataResponse) => {
       this.state.apiLocationSuggestion = {
         url: dataResponse.RESULTS[0].l,
         name: dataResponse.RESULTS[0].name };
