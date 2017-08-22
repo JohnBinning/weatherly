@@ -29,4 +29,4 @@ node_modules
 # Private Api keys
 keys.js
 
-
+.DS_Store
