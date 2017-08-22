@@ -23661,7 +23661,7 @@
 	  flurries: "url('./styles/pics/flurry.jpeg')",
 	  snow: "url('./styles/pics/flurry.jpeg')",
 	  cloudy: "url('./styles/pics/clouds.jpeg')",
-	  rain: "url('./styles/pics/rain.jpeg')",
+	  rain: "url('./styles/pics/drops.jpeg')",
 	  tstorms: "url('./styles/pics/thick_lightning.jpeg')",
 	  sunny: "url('./styles/pics/Clear_Skies.jpeg')",
 	  clear: "url('./styles/pics/Clear_Skies.jpeg')",
